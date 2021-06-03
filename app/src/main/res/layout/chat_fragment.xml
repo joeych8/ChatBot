@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chat_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="chat.ChatFragment">
+
+    <ImageButton
+        android:id="@+id/ic_burger"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_burger"
+        app:layout_constraintBottom_toBottomOf="@id/chat_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chat_textView" />
+
+    <TextView
+        android:id="@+id/chat_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="Ask me a question"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@id/ic_burger"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@id/chat_input_editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chat_textView" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/chat_input_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:background="@color/white"
+        android:hint="Type in your question here:"
+        android:paddingVertical="10dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/send_message_button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/send_message_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gray"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="16dp"
+        android:src="@drawable/ic_send"
+        app:layout_constraintBottom_toBottomOf="@id/chat_input_editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chat_input_editText"
+        app:layout_constraintTop_toTopOf="@+id/chat_input_editText" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/burger_window"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@color/gray"
+        android:orientation="vertical"
+        android:padding="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ic_burger">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/favorites_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fontFamily="@font/roboto"
+            android:paddingHorizontal="35dp"
+            android:text="Favorites"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/signOut_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:background="@color/red"
+            android:fontFamily="@font/roboto"
+            android:paddingHorizontal="30dp"
+            android:text="Let me out!"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/favorites_button" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
