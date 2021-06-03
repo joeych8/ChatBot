@@ -139,6 +139,7 @@ class ChatFragment : Fragment() {
                         chatAdapter.insertMessage(insult)
                         chatRecyclerView.scrollToPosition(chatAdapter.itemCount - 1)
                         //TODO recyclerview needs a checkup
+                        //TODO OK
                     }
                 }
                 viewModel.getInsult(context, answer)
