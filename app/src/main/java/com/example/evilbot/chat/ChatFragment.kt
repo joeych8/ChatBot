@@ -138,6 +138,7 @@ class ChatFragment : Fragment() {
                     override fun onInsultReceived(insult: ChatObject) {
                         chatAdapter.insertMessage(insult)
                         chatRecyclerView.scrollToPosition(chatAdapter.itemCount - 1)
+                        //TODO recyclerview needs a checkup
                     }
                 }
                 viewModel.getInsult(context, answer)
